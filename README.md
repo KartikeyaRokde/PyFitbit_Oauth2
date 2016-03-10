@@ -105,7 +105,7 @@ You can refresh a access token. You may need it when your access token is expire
 
 ```python
 # Getting refresh token
-refresh_token = fitbit_oauth2.p.RefreshAccessToken(access_token_response['refresh_token'])
+refresh_token = fitbit_oauth2.RefreshAccessToken(access_token_response['refresh_token'])
 
 print json.dumps(refresh_token)
 ```

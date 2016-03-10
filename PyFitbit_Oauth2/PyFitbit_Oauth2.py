@@ -126,7 +126,8 @@ class PyFitbit_Oauth2():
         # Checking if request failed
         if refresh_token_response.status_code != 200:
             raise Exception("Error in getting access token from refresh token. Error: (%s). Error description: (%s)" \
-                            % (token_response['errors'][0]['errorType'], token_response['errors'][0]['message']))
+                            % (refresh_token_response['errors'][0]['errorType'], 
+                               refresh_token_response['errors'][0]['message']))
             
         # Returning access token response
         return refresh_token_response.json()
